@@ -1,0 +1,1031 @@
+{
+	"info": {
+		"_postman_id": "73ba1e63-8f5f-485a-8192-5563622f4586",
+		"name": "CODIIS_Stream",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10233839",
+		"_collection_link": "https://www.postman.com/bold-station-630909/workspace/karthick/collection/10233839-73ba1e63-8f5f-485a-8192-5563622f4586?action=share&source=collection_link&creator=10233839"
+	},
+	"item": [
+		{
+			"name": "User Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"karthick\",\r\n    \"email\": \"kuser@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"confirmPassword\": \"123456\",\r\n    \"phone\": \"879767989\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Karthick S Admin\",\r\n    \"email\": \"kadmin@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"confirmPassword\": \"123456\",\r\n    \"phone\": \"87976798\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/admin/register",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"admin",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Common Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"kuser1@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Update",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0Y2Y0MzM3NGMxNGY5NmQxNDUyNGQiLCJlbWFpbCI6ImthZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY4MzQyMDF9.0aD-TiW-pA0Ygt12Pcyn46lcsOCq2_LwAAHzEnloJU0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Admin Karthic\",\r\n    \"phone\": \"87976798\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/admin/update",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"admin",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjUwYmYzNWIwMzBjNTQ5MGU4NjBlNWMiLCJlbWFpbCI6ImtAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MTY3NDU1OTh9.VH12yXMaCymPNzJ1j_8GniMx1KIpyUVGpF1pFIngF7s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/admin/info",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"admin",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Karhti User\",\r\n    \"password\": \"123456\",\r\n    \"phone\": \"98098\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/user/update",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0ZDQ1YTUyNWNmMzZlNTBmMTZkMTgiLCJlbWFpbCI6Imt1c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE2ODM1NDMyfQ.hFtDkYG6uZW1skkrvv0D-0Q8V_ssTS9aE6LXnseAVys",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/user/info",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"user",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Plan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0Y2Y0MzM3NGMxNGY5NmQxNDUyNGQiLCJlbWFpbCI6ImthZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY4MzQyMDF9.0aD-TiW-pA0Ygt12Pcyn46lcsOCq2_LwAAHzEnloJU0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"My Plan new\",\r\n    \"description\": \"My Plan new\",\r\n    \"price\": 100,\r\n    \"duration\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/plan/create",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"plan",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Plan List",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjUyZDA1M2FlNWNjNGIwZjM1ZGUwM2EiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxNjcxMTM4MH0.x4cFrunAwK4T-OREGNQ4u3o7PYdXBFbOpHIUULr04cM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:4001/plan/list",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"plan",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Plan Info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjUyZDA1M2FlNWNjNGIwZjM1ZGUwM2EiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxNjcxMTM4MH0.x4cFrunAwK4T-OREGNQ4u3o7PYdXBFbOpHIUULr04cM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"videoId\": [\r\n        \"66533f193b8a41d515fc853a\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/plan/66532367f4cd6571db63268b",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"plan",
+						"66532367f4cd6571db63268b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Plan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjUyZDA1M2FlNWNjNGIwZjM1ZGUwM2EiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxNjcxMTM4MH0.x4cFrunAwK4T-OREGNQ4u3o7PYdXBFbOpHIUULr04cM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"\",\r\n    \"description\": \"\",\r\n    \"price\": 989,\r\n    \"duration\":6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/plan/update",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"plan",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Plan",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjUyZDA1M2FlNWNjNGIwZjM1ZGUwM2EiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxNjcxMTM4MH0.x4cFrunAwK4T-OREGNQ4u3o7PYdXBFbOpHIUULr04cM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/plan/6653239662d92979cff352b1",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"plan",
+						"6653239662d92979cff352b1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Video Upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0Y2Y0MzM3NGMxNGY5NmQxNDUyNGQiLCJlbWFpbCI6ImthZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY4MzQyMDF9.0aD-TiW-pA0Ygt12Pcyn46lcsOCq2_LwAAHzEnloJU0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "videoFile",
+							"type": "file",
+							"src": "/C:/Users/karth/Downloads/3209828-uhd_3840_2160_25fps.mp4"
+						},
+						{
+							"key": "title",
+							"value": "test q2erer",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "test rerere",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4001/video/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"video",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Video Info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0Y2Y0MzM3NGMxNGY5NmQxNDUyNGQiLCJlbWFpbCI6ImthZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY4MzQyMDF9.0aD-TiW-pA0Ygt12Pcyn46lcsOCq2_LwAAHzEnloJU0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:4001/video/6654d2e80b915dcfba5cc49c",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"video",
+						"6654d2e80b915dcfba5cc49c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Video List",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0Y2Y0MzM3NGMxNGY5NmQxNDUyNGQiLCJlbWFpbCI6ImthZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY4MzQyMDF9.0aD-TiW-pA0Ygt12Pcyn46lcsOCq2_LwAAHzEnloJU0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "videoFile",
+							"type": "file",
+							"src": "/C:/Users/karth/Downloads/Karthick_Software_Developer.pdf"
+						},
+						{
+							"key": "title",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4001/video/list",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"video",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Plan add video",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0Y2Y0MzM3NGMxNGY5NmQxNDUyNGQiLCJlbWFpbCI6ImthZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTY4MzQyMDF9.0aD-TiW-pA0Ygt12Pcyn46lcsOCq2_LwAAHzEnloJU0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"videoId\": [\r\n       \"6654d2e80b915dcfba5cc49c\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/plan/6654d19afa8345af81fa905d/addVideo",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"plan",
+						"6654d19afa8345af81fa905d",
+						"addVideo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Plan remove video",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjUyZDA1M2FlNWNjNGIwZjM1ZGUwM2EiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxNjcxMTM4MH0.x4cFrunAwK4T-OREGNQ4u3o7PYdXBFbOpHIUULr04cM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"videoId\": [\r\n       \"66544db25be301f08a3ee86e\",\r\n\t\t\t \"66544ecf5be301f08a3ee882\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/plan/66532367f4cd6571db63268b/removeVideo",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"plan",
+						"66532367f4cd6571db63268b",
+						"removeVideo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Plan purchase",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0ZDQ1YTUyNWNmMzZlNTBmMTZkMTgiLCJlbWFpbCI6Imt1c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE2ODM1NDMyfQ.hFtDkYG6uZW1skkrvv0D-0Q8V_ssTS9aE6LXnseAVys",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:4001/plan/6654d19afa8345af81fa905d/purchase",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"plan",
+						"6654d19afa8345af81fa905d",
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0ZDQ1YTUyNWNmMzZlNTBmMTZkMTgiLCJlbWFpbCI6Imt1c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE2ODM1NDMyfQ.hFtDkYG6uZW1skkrvv0D-0Q8V_ssTS9aE6LXnseAVys",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"groupName\":\"My firest Group 2\", \r\n    \"description\":\"Test View\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/group/create",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"group",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group List",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0ZDQ1YTUyNWNmMzZlNTBmMTZkMTgiLCJlbWFpbCI6Imt1c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE2ODM1NDMyfQ.hFtDkYG6uZW1skkrvv0D-0Q8V_ssTS9aE6LXnseAVys",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"groupName\":\"test liste\", \r\n    \"description\":\"tetststesltjstklst\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/group/list",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"group",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0ZDQ1YTUyNWNmMzZlNTBmMTZkMTgiLCJlbWFpbCI6Imt1c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE2ODM1NDMyfQ.hFtDkYG6uZW1skkrvv0D-0Q8V_ssTS9aE6LXnseAVys",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/group/6654d4ee525cf36e50f16d2b",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"group",
+						"6654d4ee525cf36e50f16d2b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0ZDQ1YTUyNWNmMzZlNTBmMTZkMTgiLCJlbWFpbCI6Imt1c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE2ODM1NDMyfQ.hFtDkYG6uZW1skkrvv0D-0Q8V_ssTS9aE6LXnseAVys",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/group/6654d4d6525cf36e50f16d26",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"group",
+						"6654d4d6525cf36e50f16d26"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Add User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0ZDQ1YTUyNWNmMzZlNTBmMTZkMTgiLCJlbWFpbCI6Imt1c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE2ODM1NDMyfQ.hFtDkYG6uZW1skkrvv0D-0Q8V_ssTS9aE6LXnseAVys",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userIds\": [\r\n        \"6654d569525cf36e50f16d3b\"\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/group/6654d4ee525cf36e50f16d2b/addUsers",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"group",
+						"6654d4ee525cf36e50f16d2b",
+						"addUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group remove User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0ZDQ1YTUyNWNmMzZlNTBmMTZkMTgiLCJlbWFpbCI6Imt1c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE2ODM1NDMyfQ.hFtDkYG6uZW1skkrvv0D-0Q8V_ssTS9aE6LXnseAVys",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userIds\": [\r\n        \"6654d569525cf36e50f16d3b\"\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/group/6654d4ee525cf36e50f16d2b/removeUsers",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"group",
+						"6654d4ee525cf36e50f16d2b",
+						"removeUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Video list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0ZDQ1YTUyNWNmMzZlNTBmMTZkMTgiLCJlbWFpbCI6Imt1c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE2ODM1NDMyfQ.hFtDkYG6uZW1skkrvv0D-0Q8V_ssTS9aE6LXnseAVys",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/group/6654d4ee525cf36e50f16d2b/videos",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"group",
+						"6654d4ee525cf36e50f16d2b",
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Plan Video list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0ZDQ1YTUyNWNmMzZlNTBmMTZkMTgiLCJlbWFpbCI6Imt1c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE2ODM1NDMyfQ.hFtDkYG6uZW1skkrvv0D-0Q8V_ssTS9aE6LXnseAVys",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userIds\": [\r\n        \"66533f193b8a41d515fc853a\",\r\n        \"66533f193b8a41d515fc853a\",\r\n        \"66533f193b8a41d515fc853a\"\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/video/videoList",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"video",
+						"videoList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Favourite Add",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0ZDQ1YTUyNWNmMzZlNTBmMTZkMTgiLCJlbWFpbCI6Imt1c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE2ODM1NDMyfQ.hFtDkYG6uZW1skkrvv0D-0Q8V_ssTS9aE6LXnseAVys",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/favourite/add/6654d2e80b915dcfba5cc49c",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"favourite",
+						"add",
+						"6654d2e80b915dcfba5cc49c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Favourite Remove",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0ZDQ1YTUyNWNmMzZlNTBmMTZkMTgiLCJlbWFpbCI6Imt1c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE2ODM1NDMyfQ.hFtDkYG6uZW1skkrvv0D-0Q8V_ssTS9aE6LXnseAVys",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/favourite/remove/6654d768999d975be24dbd36",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"favourite",
+						"remove",
+						"6654d768999d975be24dbd36"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Favourite List",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0ZDQ1YTUyNWNmMzZlNTBmMTZkMTgiLCJlbWFpbCI6Imt1c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE2ODM1NDMyfQ.hFtDkYG6uZW1skkrvv0D-0Q8V_ssTS9aE6LXnseAVys",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4001/favourite/list",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"favourite",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Watch video",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjU0ZDQ1YTUyNWNmMzZlNTBmMTZkMTgiLCJlbWFpbCI6Imt1c2VyQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE2ODM1NDMyfQ.hFtDkYG6uZW1skkrvv0D-0Q8V_ssTS9aE6LXnseAVys",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:4001/video/watchVideo/6654d2e80b915dcfba5cc49c",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"video",
+						"watchVideo",
+						"6654d2e80b915dcfba5cc49c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
